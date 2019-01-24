@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    image: local/generatorapi:multibuild
+    ports:
+      - "8080:80"
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
