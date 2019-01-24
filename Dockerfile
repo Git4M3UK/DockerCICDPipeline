@@ -22,7 +22,7 @@
 
 # TEST - Build will stop here is tests fail. then ENV variable will trigger better reporting mode in XUnit runner
 	ENV TEAMCITY_PROJECT_NAME=fake
-	RUN dotnet test --logger trx tests/tests.csproj
+	RUN dotnet test tests/tests.csproj
 
 # PUBLISH
 	RUN dotnet publish api/api.csproj -c Release -o /publish
