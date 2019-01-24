@@ -21,7 +21,10 @@
 	COPY . .
 
 # TEST - Build will stop here is tests fail. then ENV variable will trigger better reporting mode in XUnit runner
-	ENV TEAMCITY_PROJECT_NAME=fake
+	
+	# Set the flag to tell TeamCity that these are unit tests:
+	ENV TEAMCITY_PROJECT_NAME = ${TEAMCITY_PROJECT_NAME}
+
 	RUN dotnet test tests/tests.csproj
 
 # PUBLISH
