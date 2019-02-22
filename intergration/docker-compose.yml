@@ -1,11 +1,13 @@
-version: '3.4'
+version: '3.7'
 
 # Start Api (Generator), Mail client and Inegration test images
 # You only need ports if you are testing on your local machine because the containers know how to talk to each other.
+# The number at the end of the variables is the Default value
+# Add the Environment variable so it passes test data to team city
 
 services:
   generator:
-    image: my-registry:55000/local/generatorapi:ci-12
+    image: my-registry:55000/local/generatorapi:ci-${GENERATOR_BUILD_NUMBER-10}
     #ports:
     #  - "8080:80"
   mail:
@@ -13,5 +15,7 @@ services:
     #ports:
     #  - "8025:8025"
   integration:
-    image: my-registry:55000/local/generatorapi:integration-10
+    image: my-registry:55000/local/generatorapi:integration-${BUILD_NUMBER-10}
     build: .
+    environment:
+      - TEAMCITY_PROJECT_NAME

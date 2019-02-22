@@ -1,6 +1,7 @@
-version: '3.4'
+version: '3.7'
 
 # Start team city and the agent images
+# We add docker-compose via a DockerFile to the agent on the build step
 
 services:
   teamcity:
@@ -11,7 +12,8 @@ services:
     ports:
       - 8111:8111
   teamcity-agent:
-    image: jetbrains/teamcity-agent:2018.2.2
+    image: aspnetcore/teamcity-agent-with-compose:2018.2.2
+    build: ./agent 
     environment:
       SERVER_URL: http://teamcity:8111
     volumes:
