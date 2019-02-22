@@ -17,3 +17,5 @@ services:
   integration:
     image: my-registry:55000/local/generatorapi:integration-${BUILD_NUMBER-10}
     build: .
+    environment:
+      - TEAMCITY_PROJECT_NAME
