@@ -6,4 +6,4 @@ RUN dotnet restore
 
 COPY . .
 
-ENTRYPOINT ["dotnet", "test --verbosity normal --logger trx"]
+ENTRYPOINT ["dotnet", "test" , "--logger trx", "--verbosity normal"]
