@@ -15,8 +15,8 @@ namespace api.Controllers
     {
         // The MAIL_HOST name is taken from the service name in docker-compose.yml
         // To run this using IIS you would need to add an entry in the host file for mail 127.0.0.1
-        public const string MAIL_HOST = "mail"; 
-        public const int MAIL_PORT = 1025;
+        public const string MailHost = "mail"; 
+        public const int MailPort = 1025;
 
         [HttpPost]
         public async Task EmailRandomNames(Range range, string email = "test@fake.com")
@@ -32,7 +32,7 @@ namespace api.Controllers
             };
             using (var mailClient = new SmtpClient())
             {
-                await mailClient.ConnectAsync(MAIL_HOST, MAIL_PORT, SecureSocketOptions.None);
+                await mailClient.ConnectAsync(MailHost, MailPort, SecureSocketOptions.None);
                 await mailClient.SendAsync(message);
                 await mailClient.DisconnectAsync(true);
             }

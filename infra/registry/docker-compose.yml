@@ -1,5 +1,7 @@
 version: '3.4'
 
+# Start local registry image
+
 services:
   my-registry:
     image: registry:2.6.1

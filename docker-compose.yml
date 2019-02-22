@@ -1,10 +1,12 @@
 version: '3.4'
 
+# Start the Api (Generator) and the Mail client images
+
 services:
-  api:
+  generator:
     build:
       context: .
-      dockerfile: api/Dockerfile
+      dockerfile: Dockerfile
     image: local/generatorapi:multibuild
     ports:
       - "8080:80"

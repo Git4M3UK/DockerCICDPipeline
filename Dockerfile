@@ -10,11 +10,11 @@
 	RUN dotnet restore api/api.csproj
 
 	# Restore test - This comes after Api because it has a dependency
-	COPY tests/tests.csproj ./tests/
-	RUN dotnet restore tests/tests.csproj
+	COPY unittests/unittests.csproj ./unittests/
+	RUN dotnet restore unittests/unittests.csproj
 
 	# List files copied in
-	RUN ls -alR 
+	# RUN ls -alR 
 
 
 # COPY SOURCE
@@ -23,8 +23,8 @@
 # TEST - Build will stop here is tests fail. then ENV variable will trigger better reporting mode in XUnit runner
 	ENV TEAMCITY_PROJECT_NAME=fake
 
-	RUN dotnet test --verbosity normal --logger trx  tests/tests.csproj
-
+	RUN dotnet test --verbosity normal --logger trx  unittests/unittests.csproj
+	
 # PUBLISH
 	RUN dotnet publish api/api.csproj -c Release -o /publish
 

@@ -2,14 +2,14 @@ using System.Linq;
 using api.Controllers;
 using Xunit;
 
-namespace tests
+namespace unittests
 {
     public class RangeTests
     {
         [Fact]
         public void CountShouldControlNumberOfResults()
         {
-            var range = new Range {Count = 3};
+            var range = new Range { Count = 3 };
 
             var generated = range.Of(() => "");
 

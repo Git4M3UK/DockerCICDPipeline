@@ -1,0 +1,12 @@
+{
+  "id": "ff2b2e66-d69f-4500-8ade-200059e2e084",
+  "name": "My Visual Studio extensions",
+  "description": "A collection of my Visual Studio extensions",
+  "version": "1.0",
+  "extensions": [
+    {
+      "name": "GitHub Extension for Visual Studio",
+      "vsixId": "c3d3dc68-c977-411f-b3e8-03b0dccf7dfc"
+    }
+  ]
+}

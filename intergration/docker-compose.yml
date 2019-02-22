@@ -1,0 +1,17 @@
+version: '3.4'
+
+# Start Api (Generator), Mail client and Inegration test images
+# You only need ports if you are testing on your local machine because the containers know how to talk to each other.
+
+services:
+  generator:
+    image: my-registry:55000/local/generatorapi:ci-12
+    #ports:
+    #  - "8080:80"
+  mail:
+    image: mailhog/mailhog
+    #ports:
+    #  - "8025:8025"
+  integration:
+    image: my-registry:55000/local/generatorapi:integration-10
+    build: .
