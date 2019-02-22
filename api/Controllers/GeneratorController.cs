@@ -24,7 +24,7 @@ namespace api.Controllers
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("Generator", "generator@generate.com"));
             message.To.Add(new MailboxAddress("", email));
-            message.Subject = "Here are some random names for you 2";
+            message.Subject = "Here are some random names for you 3";
 
             message.Body = new TextPart("plain")
             {
