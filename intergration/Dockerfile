@@ -8,6 +8,4 @@ COPY . .
 
 ENV TEAMCITY_PROJECT_NAME=fake
 
-RUN dotnet test --verbosity normal --logger trx  intergration.csproj
-
 ENTRYPOINT ["dotnet", "test"]
