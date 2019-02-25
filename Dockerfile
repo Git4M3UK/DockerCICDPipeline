@@ -1,3 +1,5 @@
+# Main project build file
+
 # BUILD STAGE
 	FROM microsoft/dotnet:2.2-sdk as build
 
@@ -14,8 +16,7 @@
 	RUN dotnet restore unittests/unittests.csproj
 
 	# List files copied in
-	# RUN ls -alR 
-
+	RUN ls -alR 
 
 # COPY SOURCE
 	COPY . .
