@@ -53,7 +53,7 @@ namespace intergration
                     .Which.Should().BeOfType<JArray>()
                     .Which.First.Should().HaveElement("Raw")
                     .Which.Should().HaveElement("From")
-                    .Which.Should().Be("xgenerator@generate.com");
+                    .Which.Should().Be("generator@generate.com");
             }
         }
     }
