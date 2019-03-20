@@ -33,6 +33,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "agent", "agent", "{CF5FBC87
 		infra\teamcity\agent\Dockerfile = infra\teamcity\agent\Dockerfile
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{D5F28072-BAC2-4011-993F-7DECF2CC2434}"
+	ProjectSection(SolutionItems) = preProject
+		infra\deploy\demo.yml = infra\deploy\demo.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "swarm", "swarm", "{97E3762C-3987-40E9-91C6-0B769A4E4011}"
+	ProjectSection(SolutionItems) = preProject
+		infra\swarm\services\visualizer.yml = infra\swarm\services\visualizer.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +97,8 @@ Global
 		{30637217-73EB-4848-8A11-F39B8CD08B33} = {83CDAC66-E507-4B5D-AE72-67F216C91688}
 		{75F74D95-6FF6-4A49-8691-3A90103AAB18} = {83CDAC66-E507-4B5D-AE72-67F216C91688}
 		{CF5FBC87-0855-44A0-A3EE-9FDCEBC3B804} = {75F74D95-6FF6-4A49-8691-3A90103AAB18}
+		{D5F28072-BAC2-4011-993F-7DECF2CC2434} = {83CDAC66-E507-4B5D-AE72-67F216C91688}
+		{97E3762C-3987-40E9-91C6-0B769A4E4011} = {83CDAC66-E507-4B5D-AE72-67F216C91688}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57F972A6-1A0C-4124-AEA4-FA50DF347E1B}

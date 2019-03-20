@@ -1,0 +1,13 @@
+version: '3.7'
+
+# Save to local my-registry:55000/local/generatorapi
+
+services:
+  generator:
+    image: akennard/docker_repo:ci-${GENERATOR_BUILD_NUMBER-5}
+    ports:
+      - "8085:80"
+  mail:
+    image: mailhog/mailhog
+    ports:
+      - "8086:8025"

@@ -24,7 +24,7 @@ namespace api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "PIPELINE SETUP - Generate Random Data API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "PIPELINE 20Mar - Generate Random Data API", Version = "v1" });
             });
 
         }

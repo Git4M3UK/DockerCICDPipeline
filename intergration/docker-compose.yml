@@ -4,10 +4,11 @@ version: '3.7'
 # You only need ports if you are testing on your local machine because the containers know how to talk to each other.
 # The number at the end of the variables is the Default value
 # Add the Environment variable so it passes test data to team city
+# Save to local my-registry:55000/local/generatorapi
 
 services:
   generator:
-    image: my-registry:55000/local/generatorapi:ci-${GENERATOR_BUILD_NUMBER-10}
+    image: akennard/docker_repo:ci-${GENERATOR_BUILD_NUMBER-10}
     #ports:
     #  - "8080:80"
   mail:
@@ -15,7 +16,7 @@ services:
     #ports:
     #  - "8025:8025"
   integration:
-    image: my-registry:55000/local/generatorapi:integration-${BUILD_NUMBER-10}
+    image: akennard/docker_repo:integration-${BUILD_NUMBER-10}
     build: .
     environment:
       - TEAMCITY_PROJECT_NAME
